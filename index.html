@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Натяжні стелі під ключ — замір безкоштовно</title>
+    <meta
+      name="description"
+      content="Установлення натяжних стель за 1 день. Безкоштовний замір, фіксована ціна в договорі, гарантія 10 років."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #14202b;
+        --ink2: #1e2f3d;
+        --paper: #f6f8fa;
+        --white: #fff;
+        --lamp: #ffc857;
+        --mute: #5d6b78;
+        --line: #dde4ea;
+        --h: "Unbounded", "Arial Black", sans-serif;
+        --b: "Onest", "Segoe UI", Arial, sans-serif;
+        box-sizing: border-box;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font: 400 17px/1.55 var(--b);
+        color: var(--ink);
+        background: var(--paper);
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--h);
+        font-weight: 700;
+        line-height: 1.15;
+        margin: 0;
+      }
+      h2 {
+        font-size: clamp(24px, 4vw, 36px);
+        margin-bottom: 28px;
+      }
+      .btn {
+        display: inline-block;
+        border: 0;
+        cursor: pointer;
+        font: 600 17px var(--b);
+        background: var(--lamp);
+        color: var(--ink);
+        padding: 16px 28px;
+        border-radius: 999px;
+        text-decoration: none;
+      }
+      .btn:hover {
+        filter: brightness(1.05);
+      }
+      :focus-visible {
+        outline: 3px solid var(--lamp);
+        outline-offset: 3px;
+      }
+
+      header {
+        background: var(--ink);
+        color: #fff;
+      }
+      .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 0;
+        gap: 16px;
+      }
+      .logo {
+        font: 700 18px var(--h);
+        text-decoration: none;
+      }
+      .tel {
+        font-weight: 600;
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      /* hero: the ceiling itself, with spotlights */
+      .hero {
+        background: var(--ink);
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        padding: 48px 0 110px;
+      }
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 18% 0,
+            rgba(255, 200, 87, 0.55) 0,
+            rgba(255, 200, 87, 0) 130px
+          ),
+          radial-gradient(
+            circle at 50% 0,
+            rgba(255, 200, 87, 0.55) 0,
+            rgba(255, 200, 87, 0) 130px
+          ),
+          radial-gradient(
+            circle at 82% 0,
+            rgba(255, 200, 87, 0.55) 0,
+            rgba(255, 200, 87, 0) 130px
+          ),
+          linear-gradient(180deg, #2a3f52 0, #14202b 70%);
+      }
+      .hero .wrap {
+        position: relative;
+      }
+      .spots {
+        display: flex;
+        justify-content: space-around;
+        margin: 0 0 56px;
+      }
+      .spots i {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #fff6dc;
+        box-shadow: 0 0 28px 8px rgba(255, 200, 87, 0.7);
+      }
+      .hero h1 {
+        font-size: clamp(30px, 6vw, 56px);
+        max-width: 760px;
+      }
+      .hero p {
+        max-width: 540px;
+        font-size: 19px;
+        color: #cfd9e2;
+        margin: 20px 0 32px;
+      }
+      .facts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 32px;
+        margin-top: 40px;
+        color: #cfd9e2;
+        font-size: 15px;
+      }
+      .facts b {
+        color: #fff;
+      }
+
+      section {
+        padding: 72px 0;
+      }
+      .alt {
+        background: var(--white);
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      }
+      .type {
+        border-top: 4px solid var(--ink);
+        padding-top: 16px;
+      }
+      .type h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+      .type p {
+        margin: 0;
+        color: var(--mute);
+        font-size: 16px;
+      }
+      .price {
+        margin-top: 12px;
+        font-weight: 600;
+      }
+
+      .why {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .why li {
+        padding-left: 18px;
+        border-left: 3px solid var(--lamp);
+      }
+      .why b {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      .why span {
+        color: var(--mute);
+        font-size: 16px;
+      }
+
+      .steps {
+        counter-reset: s;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+      .steps li {
+        counter-increment: s;
+      }
+      .steps li::before {
+        content: counter(s);
+        display: grid;
+        place-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: #fff;
+        font: 700 16px var(--h);
+        margin-bottom: 12px;
+      }
+      .steps b {
+        display: block;
+        margin-bottom: 4px;
+      }
+      .steps span {
+        color: var(--mute);
+        font-size: 16px;
+      }
+
+      .cta {
+        background: var(--ink);
+        color: #fff;
+      }
+      .cta .wrap {
+        display: grid;
+        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        align-items: start;
+      }
+      .cta p {
+        color: #cfd9e2;
+        margin: 0;
+      }
+      form {
+        background: var(--white);
+        color: var(--ink);
+        padding: 28px;
+        border-radius: 20px;
+        display: grid;
+        gap: 14px;
+      }
+      label {
+        font-weight: 600;
+        font-size: 15px;
+        display: grid;
+        gap: 6px;
+      }
+      input,
+      textarea {
+        font: 400 17px var(--b);
+        padding: 14px 16px;
+        border: 1.5px solid var(--line);
+        border-radius: 12px;
+        width: 100%;
+        background: #fff;
+        color: var(--ink);
+      }
+      input:focus,
+      textarea:focus {
+        border-color: var(--ink);
+        outline: none;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 84px;
+      }
+      .hp {
+        position: absolute;
+        left: -9999px;
+      }
+      .note {
+        font-size: 13px;
+        color: var(--mute);
+        margin: 0;
+      }
+      #msg {
+        margin: 0;
+        font-weight: 600;
+        min-height: 1.5em;
+      }
+      #msg.ok {
+        color: #17803d;
+      }
+      #msg.err {
+        color: #b3261e;
+      }
+      footer {
+        background: #0f1820;
+        color: #8fa0af;
+        padding: 28px 0;
+        font-size: 14px;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap top">
+        <a class="logo" href="#">СТЕЛІ-МАЙСТЕР</a>
+        <a class="tel" href="tel:+380935105071">+380 93 510 50 71</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="wrap">
+          <div class="spots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <h1>
+            Натяжні стелі за один день — рівно, чисто, без сюрпризів у ціні
+          </h1>
+          <p>
+            Приїдемо на замір безкоштовно, назвемо остаточну ціну та закріпимо
+            її в договорі.
+          </p>
+          <a class="btn" href="#order">Замовити безкоштовний замір</a>
+          <div class="facts">
+            <span><b>1 день</b> монтаж кімнати</span>
+            <span><b>10 років</b> гарантії</span>
+            <span><b>0 грн</b> за замір</span>
+          </div>
+        </div>
+      </div>
+
+      <section id="types">
+        <div class="wrap">
+          <h2>Які стелі робимо</h2>
+          <div class="grid">
+            <div class="type">
+              <h3>Матові</h3>
+              <p>
+                Виглядають як ідеально пофарбована стеля. Підходять для
+                будь-якої кімнати.
+              </p>
+              <div class="price">від 250 грн/м²</div>
+            </div>
+            <div class="type">
+              <h3>Глянцеві</h3>
+              <p>
+                Відбивають світло й візуально піднімають стелю. Гарні для
+                невеликих кімнат.
+              </p>
+              <div class="price">від 280 грн/м²</div>
+            </div>
+            <div class="type">
+              <h3>Сатинові</h3>
+              <p>
+                М'який перламутровий блиск — золота середина між матовим і
+                глянцем.
+              </p>
+              <div class="price">від 300 грн/м²</div>
+            </div>
+            <div class="type">
+              <h3>Дворівневі</h3>
+              <p>Зонування кімнати та прихована підсвітка по периметру.</p>
+              <div class="price">від 600 грн/м²</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="alt">
+        <div class="wrap">
+          <h2>Чому обирають нас</h2>
+          <ul class="why">
+            <li>
+              <b>Ціна не змінюється</b
+              ><span
+                >Сума з договору — фінальна. Жодних доплат після монтажу.</span
+              >
+            </li>
+            <li>
+              <b>Без пилу та бруду</b
+              ><span
+                >Працюємо акуратно, після себе прибираємо й вивозимо
+                сміття.</span
+              >
+            </li>
+            <li>
+              <b>Витримують потоп</b
+              ><span
+                >Полотно тримає до 100 літрів води на квадратний метр.</span
+              >
+            </li>
+            <li>
+              <b>Світло під ваш дизайн</b
+              ><span
+                >Споти, люстри, світлові лінії — підключимо та налаштуємо.</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Як ми працюємо</h2>
+          <ol class="steps">
+            <li>
+              <b>Заявка</b
+              ><span>Залишаєте номер — передзвонюємо протягом 15 хвилин.</span>
+            </li>
+            <li>
+              <b>Замір</b
+              ><span>Приїжджаємо в зручний час, рахуємо точну вартість.</span>
+            </li>
+            <li>
+              <b>Договір</b><span>Фіксуємо ціну, матеріали та терміни.</span>
+            </li>
+            <li>
+              <b>Монтаж</b
+              ><span
+                >Встановлюємо за 2–4 години на кімнату. Приймаєте роботу.</span
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="cta" id="order">
+        <div class="wrap">
+          <div>
+            <h2>Дізнайтеся вартість вашої стелі</h2>
+            <p>
+              Залиште ім'я та телефон. Ми передзвонимо, уточнимо розміри й
+              домовимося про безкоштовний замір.
+            </p>
+          </div>
+          <form id="f" novalidate>
+            <label
+              >Ваше ім'я<input
+                name="name"
+                autocomplete="name"
+                required
+                maxlength="60"
+            /></label>
+            <label
+              >Телефон<input
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="+38 0XX XXX XX XX"
+                required
+                maxlength="25"
+            /></label>
+            <label
+              >Коментар (необов'язково)<textarea
+                name="comment"
+                maxlength="400"
+                placeholder="Площа, кількість кімнат, тип стелі"
+              ></textarea>
+            </label>
+            <input
+              class="hp"
+              name="website"
+              tabindex="-1"
+              autocomplete="off"
+              aria-hidden="true"
+            />
+            <button class="btn" type="submit" id="b">Надіслати заявку</button>
+            <p id="msg" role="status"></p>
+            <p class="note">
+              Натискаючи кнопку, ви погоджуєтесь на обробку персональних даних.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        © <span id="y"></span> Стелі-Майстер · м. Дніпро · Щодня 9:00–20:00
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+      // Настройки Telegram-бота (вставте свої значення)
+      var BOT_TOKEN = "ВСТАВТЕ_ТОКЕН_ВІД_BOTFATHER";
+      var CHAT_ID = "ВСТАВТЕ_ВАШ_CHAT_ID";
+      function esc(t) {
+        return String(t)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+      }
+      var f = document.getElementById("f"),
+        m = document.getElementById("msg"),
+        b = document.getElementById("b");
+      f.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var d = Object.fromEntries(new FormData(f).entries());
+        m.className = "";
+        if (d.website) {
+          return;
+        }
+        if (d.name.trim().length < 2) {
+          m.className = "err";
+          m.textContent = "Введіть ім'я.";
+          return;
+        }
+        if (d.phone.replace(/\D/g, "").length < 10) {
+          m.className = "err";
+          m.textContent = "Введіть телефон повністю, не менше 10 цифр.";
+          return;
+        }
+        b.disabled = true;
+        b.textContent = "Надсилаємо…";
+        var text =
+          "🆕 <b>Нова заявка з сайту</b>\n\n👤 Ім'я: " +
+          esc(d.name.trim()) +
+          "\n📞 Телефон: " +
+          esc(d.phone.trim()) +
+          (d.comment.trim() ? "\n💬 Коментар: " + esc(d.comment.trim()) : "");
+        fetch("https://api.telegram.org/bot" + BOT_TOKEN + "/sendMessage", {
+          method: "POST",
+          body: new URLSearchParams({
+            chat_id: CHAT_ID,
+            text: text,
+            parse_mode: "HTML",
+          }),
+        })
+          .then(function (r) {
+            if (!r.ok) throw 0;
+            return r.json();
+          })
+          .then(function () {
+            m.className = "ok";
+            m.textContent = "Заявку надіслано. Невдовзі передзвонимо!";
+            f.reset();
+          })
+          .catch(function () {
+            m.className = "err";
+            m.textContent =
+              "Не вдалося надіслати. Зателефонуйте нам за номером у шапці сайту.";
+          })
+          .finally(function () {
+            b.disabled = false;
+            b.textContent = "Надіслати заявку";
+          });
+      });
+    </script>
+  </body>
+</html>
