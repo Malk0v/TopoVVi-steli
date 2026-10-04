@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Натяжні стелі під ключ — замір безкоштовно</title>
+    <title>TopoVIsteli-Натяжні стелі під ключ в Вінніці на області</title>
     <meta
       name="description"
       content="Установлення натяжних стель за 1 день. Безкоштовний замір, фіксована ціна в договорі, гарантія 10 років."
@@ -89,7 +89,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 18px 0;
+        padding: 18px 10px;
         gap: 16px;
       }
       .logo {
@@ -337,7 +337,7 @@
   <body>
     <header>
       <div class="wrap top">
-        <a class="logo" href="#">СТЕЛІ-МАЙСТЕР</a>
+        <a class="logo" href="#">TopoVIsteli-Натяжні стелі під ключ в Вінніці</a>
         <a class="tel" href="tel:+380935105071">+380 93 510 50 71</a>
       </div>
     </header>
@@ -355,8 +355,9 @@
           </p>
           <a class="btn" href="#order">Замовити безкоштовний замір</a>
           <div class="facts">
-            <span><b>1 день</b> монтаж кімнати</span>
-            <span><b>10 років</b> гарантії</span>
+            <span><b>12 років</b> гарантії на полотно</span>
+            <span><b>1 рік</b> гарантії на работу</span>
+            <span><b>1 день</b> монтаж кімнат</span>
             <span><b>0 грн</b> за замір</span>
           </div>
         </div>
@@ -372,7 +373,7 @@
                 Виглядають як ідеально пофарбована стеля. Підходять для
                 будь-якої кімнати.
               </p>
-              <div class="price">від 250 грн/м²</div>
+              <div class="price">від 350 грн/м²</div>
             </div>
             <div class="type">
               <h3>Глянцеві</h3>
@@ -380,7 +381,7 @@
                 Відбивають світло й візуально піднімають стелю. Гарні для
                 невеликих кімнат.
               </p>
-              <div class="price">від 280 грн/м²</div>
+              <div class="price">від 400 грн/м²</div>
             </div>
             <div class="type">
               <h3>Сатинові</h3>
@@ -388,12 +389,7 @@
                 М'який перламутровий блиск — золота середина між матовим і
                 глянцем.
               </p>
-              <div class="price">від 400 грн/м²</div>
-            </div>
-            <div class="type">
-              <h3>Дворівневі</h3>
-              <p>Зонування кімнати та прихована підсвітка по периметру.</p>
-              <div class="price">від 600 грн/м²</div>
+              <div class="price">від 450 грн/м²</div>
             </div>
           </div>
         </div>
@@ -445,12 +441,9 @@
               ><span>Приїжджаємо в зручний час, рахуємо точну вартість.</span>
             </li>
             <li>
-              <b>Договір</b><span>Фіксуємо ціну, матеріали та терміни.</span>
-            </li>
-            <li>
               <b>Монтаж</b
               ><span
-                >Встановлюємо за 2–4 години на кімнату. Приймаєте роботу.</span
+                >Встановлюємо за 1–4 години на кімнату. Приймаєте роботу.</span
               >
             </li>
           </ol>
@@ -472,6 +465,7 @@
                 name="name"
                 autocomplete="name"
                 required
+                minlength="3"
                 maxlength="60"
             /></label>
             <label
@@ -481,13 +475,14 @@
                 autocomplete="tel"
                 placeholder="+38 0XX XXX XX XX"
                 required
+                minlength="9"
                 maxlength="25"
             /></label>
             <label
               >Коментар (необов'язково)<textarea
                 name="comment"
                 maxlength="400"
-                placeholder="Площа, кількість кімнат, тип стелі"
+                placeholder="Місто, Площа, кількість кімнат, тип стелі"
               ></textarea>
             </label>
             <input
@@ -509,7 +504,21 @@
 
     <footer>
       <div class="wrap">
-        © <span id="y"></span> Стелі-Майстер · м. Вінниця · Щодня 9:00–20:00
+        · © <span id="y"></span> · TopoVIsteli 
+        <br />
+        · м. Вінниця 
+        <br />
+        · Щодня 9:00–20:00
+        <br />
+        <a class="tel" href="tel:+380935105071">· +380 93 510 50 71</a>
+        <br>
+        <a href="https://www.instagram.com/topovisteli?stkn=ZXN4dTgzdHJ4OGJh&utm_source=qr"
+        >наш інстаграм <img src="./inst.png" width="15px"
+        /></a>
+        <br>
+        <a href="https://www.tiktok.com/@topovisteli?_r=1&_t=ZS-9AH1Qb8zMeK"
+          >наш тік ток <img src="./tt.png"  width="15px alt=""
+        /></a>
       </div>
     </footer>
 
@@ -535,7 +544,7 @@
         if (d.website) {
           return;
         }
-        if (d.name.trim().length < 2) {
+        if (d.name.trim().length < 3) {
           m.className = "err";
           m.textContent = "Введіть ім'я.";
           return;
